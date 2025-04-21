@@ -7,7 +7,7 @@ const API = axios.create({
     },
 });
 
-export const register = (data) => API.post("/auth/register", data);  // Без лишних заголовков
+export const register = (data) => API.post("/users/register", data);  // Без лишних заголовков
 export const login = (data) => API.post("/auth/token", data);  // Также без лишних заголовков
 
 export const logout = (token) => API.post("/auth/logout", {}, { headers: { Authorization: `Bearer ${token}` } });
